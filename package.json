@@ -1,0 +1,35 @@
+{
+  "name": "fitnesstracker",
+  "version": "1.0.0",
+  "description": "fitness profile, exercise logs, and connecting with friends",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "author": "Dorothy Scheines",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.0",
+    "mongodb": "^3.3.3",
+    "mongoose": "^5.7.6",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dottidee/FitnessTracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dottidee/FitnessTracker/issues"
+  },
+  "homepage": "https://github.com/dottidee/FitnessTracker#readme"
+}
