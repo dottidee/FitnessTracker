@@ -1,21 +1,26 @@
 const express = require('express');
-const mongodb = require('mongodb');
+const mongoose = require('mongmongoose');
 
 const router = express.Router();
 
 //Get Posts
-router.get('/', async(req, res) => {
+router.get('/', async (req, res) => {
     const posts = await loadPostsCollection();
-    res.send(await posts.find({}).toArray());
+    const arr = await posts.find({}).toArray();
+    //console.log(arr);
+    res.send(arr);
 });
 
 //Add Posts
 router.post('/', async (req, res) => {
     const posts = await loadPostsCollection();
-    await posts.insertOne({
+    const newPost = {
         text: req.body.text,
         createdAt: new Date()
-    });
+    };
+    console.log(newPost);
+
+    await posts.insertOne(newPost);
     res.status(201).send();
 });
 
